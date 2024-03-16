@@ -2,7 +2,7 @@ package com.ten0l;
 
 public class Task {
     private String text;
-    private boolean isDone = false;
+    private boolean isComplited = false;
 
     public Task() {}
 
@@ -14,20 +14,12 @@ public class Task {
         return text;
     }
 
-    public boolean isDone() {
-        return isDone;
-    }
-
-    public void setDone(boolean done) {
-        isDone = done;
-    }
-
-    public void markAsDone() {
-        this.isDone = true;
+    public void markAsComplited() {
+        this.isComplited = true;
     }
 
     @Override
     public String toString() {
-        return this.isDone ? "[x] " + text : "[ ] " + text;
+        return this.isComplited ? " [x] " + text : "[ ] " + text;
     }
 }
