@@ -78,8 +78,10 @@ public class Application {
             System.out.println("Некорректный номер проекта.");
             return;
         }
+
         ProjectWithTasks project = projects.get(projectIndex);
         List<Task> tasks = project.getTasks();
+
         if (tasks.isEmpty()) {
             System.out.println("В этом проекте пока нет задач.");
             return;
@@ -102,7 +104,7 @@ public class Application {
             System.out.println("Некорректный номер задачи.");
             return;
         }
-        tasks.get(taskIndex).markAsComplited();
+        tasks.get(taskIndex).markAsCompleted();
         System.out.println("Задача \"" + tasks.get(taskIndex).getText() + "\" выполнена.");
     }
 
@@ -137,7 +139,6 @@ public class Application {
         projects.get(projectIndex).add(task);
         System.out.println("Задача успешно добавлена к проекту \"" + projects.get(projectIndex).getName() + "\".");
     }
-
 
     private void viewProjects() {
         if (!projects.isEmpty()) {

@@ -1,10 +1,8 @@
 package com.ten0l;
 
 public class Task {
-    private String text;
-    private boolean isComplited = false;
-
-    public Task() {}
+    private final String text;
+    private boolean isCompleted = false;
 
     public Task(String text) {
         this.text = text;
@@ -14,12 +12,12 @@ public class Task {
         return text;
     }
 
-    public void markAsComplited() {
-        this.isComplited = true;
+    public void markAsCompleted() {
+        this.isCompleted = true;
     }
 
     @Override
     public String toString() {
-        return this.isComplited ? " [x] " + text : "[ ] " + text;
+        return this.isCompleted ? " [x] " + this.text : "[ ] " + this.text;
     }
 }

@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProjectWithTasks {
-    private String name;
-    private List<Task> tasks;
-
-    public ProjectWithTasks() {}
+    private final String name;
+    private final List<Task> tasks;
 
     public ProjectWithTasks(String name) {
         this.name = name;
@@ -17,10 +15,6 @@ public class ProjectWithTasks {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public List<Task> getTasks() {
